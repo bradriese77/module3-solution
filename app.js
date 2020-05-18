@@ -35,7 +35,7 @@
        MenuSearchService.getMatchedMenuItems().then(function (response) {
 
         var foundItems=response.data.menu_items.filter(function(Item) {
-	return Item.name.includes(menu.name);
+	return Item.name.toLowerCase().includes(menu.name.toLowerCase());
 });;
          console.log(foundItems);
         menu.foundItems =foundItems;
